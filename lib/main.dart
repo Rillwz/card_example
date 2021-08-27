@@ -16,21 +16,26 @@ class MyApp extends StatelessWidget {
             margin: EdgeInsets.all(10),
             child: ListView(
               children: [
-                Card(
-                  elevation: 5,
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        child: Icon(Icons.account_box),
-                      ),
-                      Text('Account Box'),
-                    ],
-                  ),
-                )
+                buildCard(Icons.account_box, 'Account Box'),
+                buildCard(Icons.adb, 'Serangga Android'),
               ],
             ),
           )),
+    );
+  }
+
+  Card buildCard(IconData iconData, String text) {
+    return Card(
+      elevation: 5,
+      child: Row(
+        children: [
+          Container(
+            margin: EdgeInsets.all(5),
+            child: Icon(iconData),
+          ),
+          Text(text),
+        ],
+      ),
     );
   }
 }
