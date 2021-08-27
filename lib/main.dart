@@ -17,9 +17,13 @@ class MyApp extends StatelessWidget {
             child: ListView(
               children: [
                 Card(
+                  elevation: 5,
                   child: Row(
                     children: [
-                      Icon(Icons.account_box),
+                      Container(
+                        margin: EdgeInsets.all(5),
+                        child: Icon(Icons.account_box),
+                      ),
                       Text('Account Box'),
                     ],
                   ),
